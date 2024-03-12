@@ -1,0 +1,9 @@
+D = Directive
+C = Concurrent Declarative
+L = Lazy Declarative
+S = Stateful
+O = Object Orientated
+S = Shared State Concurrent
+M = Message Passing Concurrent
+R = Relational
+S = Specialized

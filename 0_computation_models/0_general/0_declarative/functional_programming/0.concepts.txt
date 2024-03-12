@@ -1,0 +1,218 @@
+What is a functor?
+    resources:
+        Sinisa Louc. Hackernoon. 2016. Functors and Applicatives
+
+    Wrapper/Container/Context for values
+        with the following operations
+            identity: Unit in Scala, return in Haskell
+                
+                unit[A](a: A): F[A]
+            map
+                Provides a way to apply a function to the values
+                Returns values in same context(same container, this allows for chaining)
+                fMap in Haskell, just map in Scala
+
+                map[A, B](f:F[A])(f: A → B): F[B]
+
+    Bit of Category Theory
+        Functor is a "mapping" between categories
+            hence the map function on all Functors
+            The map function maps morphisms
+            identity maps the objects
+    example
+    Functor {
+        values //the values
+        map(g) // function f that applies function g to every item in values
+    }
+
+Functor laws
+    given m is a Functor instance
+        holding some value of type Int
+        function f and g are single parameter functions that transform that value
+            They have the signature: Int => Something
+
+            VERY IMPORTANT: f and g are single parameter functions
+                            This is a limitation, we can't even solve it with currying because the result type 
+                            is the partially applied function wrapped in a Functor context(refers to Functors.scala) file
+
+                            map does not know how to apply functions like these(Applicatives solve this problem)
+
+        1. identity law
+            map id = id //math "="
+            Scala : m.map(identity) == m
+
+            //given some value simply return that value
+        2. distributive law
+            F map f map g = F map (g◦f) //math "="
+            Scala m.map(f).map(g) == m.map(x => g(f(x)))
+
+            ◦ = standard mathematical notation for function composition 
+                (g◦f) means g after f
+            F = functor
+
+What is a applicative(applicative functor)?
+    Note: Address the problem that map does not know how to apply functions wrapped inside a Functor context
+    A Functor that has multi-parameter functions to map over it's values
+
+    has the following functions
+        identity
+        apply
+            apply[A,B](f: F[A])(f: F[A → B]): F[B]
+
+    other way to define an applicative functor
+        identity
+        map2
+
+    other way to define an applicative functor
+        identity
+        map
+        product
+    laws
+        https://en.wikibooks.org/wiki/Haskell/Applicative_functors#Applicative_functor_laws
+
+    When is useful?
+        Suppose you read 3 points of triangle from a DB
+            returned as Future[Int] (because it's IO)
+        And you want to calculate the perimeter using the function below
+            def calculate(a: Int, b: Int, c: Int): Int = a + b + c
+
+            You can't use pass them in because they're Future[Int] and the function expects Int
+
+        solution
+            def calculate(a: Int)(b: Int)(c: Int): Int = a + b + c // must be curried
+
+        val a = Future(2)
+        val b = Future(6)
+        val c = Future(4)
+
+        a.apply(b.apply(c.apply(unit(calculate))))
+
+        Note: calculate is wrapped in unit, because apply operates on functions wrapped in a Functor context
+
+What is a monad?
+    resources: https://medium.com/@sinisalouc/demystifying-the-monad-in-scala-cc716bb6f534
+    Wrapper/Container/Context for values 
+        with the following operations
+            1. identity (return in Haskell, unit in Scala)
+            2. bind/flatMap (>>= in Haskell, flatMap in Scala)
+
+            1. performs the wrapping part
+
+What are the monad axioms?
+    Context: given some value x, monad instance m(with a value), functions f and g of type Int -> M[Int]
+
+    1. left identity law
+    2. right identity law
+    3. associativity law
+
+    1. unit(x).flatMap(f) == f(x)
+    2. m.flatMap(unit) == m
+    3. m.flatMap(f).flatMap(g) == m.flatMap(x => f(x).flatMap(g))
+
+What Scala data types are, or behave like, monads?
+    Option
+    List
+    Seq
+    All of them?
+    No, Int etc
+
+What are the basic and optional requirement/s to conform a Monad?
+    unit
+    flatMap
+
+Explain higher order functions.
+    functions that at least take function parameters or return functions
+
+What is gained from using immutable objects?
+    equality is reliable
+    code is predictable and reliably deterministic
+
+    copy data structures when "chaining"
+        slow? No => persistent/partially persistent immutable data structure
+            structural sharing
+
+    control state
+    avoid concurrent state access issues
+        dirty reads
+        unrepeatable reads
+
+What is tail recursion?
+    Resource: https://www.geeksforgeeks.org/tail-recursion/
+    This is a special case of recursion
+    where the last statement executed is the call to the function
+
+    Why do we care?
+        Save stack space
+        Compilers can optimize tail recursive calls as opposed to non tail recursive calls
+        How:
+            function call stack elimination
+            Since the last statement in the call to the function, thus
+                there is nothing else left to do.
+                We can discard the current function call's stack allocation
+
+How does it differentiate from common recursion?
+    common recursion creates a new stack frame for each function invocation
+
+    while tail recursion, does not. It runs in constant stack space
+    compilers do this by using a technique called tail call optimization
+        identity tail recursion
+        label the beginning
+        update parameters at the end
+        execute a go-to start
+
+What issues are there with tail recursive functions in the JVM?
+    The instruction set available on the JVM makes implementing more advanced tail recursion very difficult
+    
+    Only direct tail recursive calls to the same function can be optimized
+
+    Example of ones that can't
+        1. mutually tail recursive calls
+            def is_even(n: Int) if (n % 2 == 0) true else is_odd(n)
+            def is_odd(n: Int) if (n % 2 != 0) true else is_even(n)
+        2. if the tail call is nested in a function value
+            { functionCall(n) }
+
+How does the Scala compiler optimize a tail recursive function?
+    same way described here: How does it differentiate from common recursion?
+
+How do you ensure that the compiler optimizes the tail recursive function?
+    @tailrec
+
+What is function currying?  
+    Taking a function of n parameters
+        and turning it into n single parameter functions
+
+    def f(x: Int)(y: Int)(z: Int) = x + y + z
+
+    f(1) returns g(y: Int)(z: Int) = 1 + y + z
+    g(5) returns h(z: Int) = 1 + 5 + z
+    h(10) returns 16 // 1 + 5 + 10
+
+What are implicit parameters?
+    parameters passed in implicitly
+    they're marked with implicit on definition
+
+What are type classes?
+    Resource: https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html
+
+    Sinisa Louc. Hackernoon. 2016. Ad-hoc polymorphism and type classes
+    A Type class is a class(group) of types
+        Which satisfy some contract (They're not necessarily in the same class hierarchy)
+            defined somewhere(maybe in a trait in Scala)
+            with condition that such functionality(trait and implementation) can be added without changing the original code
+    Note: You can do this with a trait, how are type classes better?
+        You do not need to change the declaration of the existing type
+        With a trait mixin you have to go and mix the trait into the type you want to add this behavior to
+            effectively changing and code and need to recompile...
+
+
+
+    Use case: Want to add some behavior to classes that are not in some natural class hierarchy
+            Construct to add ad-hoc polymorphism by creating a grouping of objects?
+        What is polymorphism? => refer to OOP file
+
+What are lenses?
+
+What is and which are the uses of: Enumerators, Enumeratees and Iteratee
+
+What is the benefit of functional data structures?

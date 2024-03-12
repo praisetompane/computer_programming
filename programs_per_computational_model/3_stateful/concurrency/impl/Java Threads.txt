@@ -1,0 +1,12 @@
+Threads in Java
+    Every Thread(on the Operating System) in Java is CREATED and CONTROLLED by an object 
+        of the java.lang.Thread class.
+
+    When a stand alone program starts up, 
+        a user Thread is automatically created to run the main() method.
+            This is called the main Thread.
+
+
+    You can run threaded programming by implementing
+        java.lang.Thread
+        java.lang.Runnable
