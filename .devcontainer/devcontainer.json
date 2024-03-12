@@ -1,0 +1,21 @@
+{
+	"name": "computer_programming",
+	"build": {
+		"dockerfile": "../Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.debugpy",
+				"ms-python.mypy-type-checker",
+				"mozart-oz.vscode-oz"
+			],
+			"settings": {}
+		}
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/computer_programming,type=bind,consistency=delegated",
+	"workspaceFolder": "/computer_programming"
+}
