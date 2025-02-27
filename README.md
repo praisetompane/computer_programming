@@ -1,21 +1,17 @@
 # What is Computer Programming?
 
-**objectives(Van Roy, Haridi S. 2004:xiii)**:
+![build status](https://github.com/praisetompane/computer_programming/actions/workflows/computer_programming.yaml/badge.svg) <br>
 
+## Objectives
 - attempts to define computer programming as a unified discipline using programming concepts and techniques independent of programming language implementations.
 
+## Definitions:
 - def programming concepts (Van Roy, Haridi S. 2004:xiii):
-
   - these are organized in terms of/in relation to computation models:
-
     - def computation model: formal system, that defines how computations are done (Van Roy, Haridi S. 2004:xiii):
-
       - based on a simple core language called its kernel language (Van Roy, Haridi S. 2004:xiv)
-
         - def kernel language: TBD
-
       - defined in terms of (Van Roy, Haridi S. 2004:xiii):
-
         - data types
         - operations
         - a programming language
@@ -32,30 +28,53 @@
         - set of techniques for:
           - reasoning about programs
 
-**def creative extension principle**: main criterion for when and which concept to add to a computation mode/kernel language (Van Roy, Haridi S. 2004:xiv)
+- def creative extension principle: main criterion for when and which concept to add to a computation mode/kernel language (Van Roy, Haridi S. 2004:xiv)
 
-**def computer programming**: the act of extending or
-changing a system's functionality (Van Roy, Haridi S. 2004:xv).
-
+- def computer programming: the act of extending or changing a system's functionality (Van Roy, Haridi S. 2004:xv).
   - practitioners:
-
     - general users: by changing the setting of an alarm
     - expert users: by writing new features for the system or updating existing
-
   - example:
-
     - extending a system's functionality:
-
       - writing a new application for iOS
-
     - changing a system's functionality:
       - moving iOS from using 4 digits to 7 digits passwords
 
-def technology:
+- def technology:
 
-def λ calculus:
+- def λ calculus:
 
-def abstractions:
+- def abstractions:
+
+## Dependencies
+- [Docker](https://docs.docker.com/get-started/)
+- [Mozart2](http://mozart2.org)
+
+## Setup Instructions
+- The repository is configured to use [devcontainers](https://containers.dev) for development.
+    - [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)
+
+## History
+
+## Notation
+
+## Tools
+
+## State of the art
+
+## Community
+
+## Computer Programmers
+
+## Spell Check
+```shell
+pipenv shell
+```
+
+```shell
+pyspelling -c spellcheck.yaml
+```
+
 
 ## References:
   - Van Roy P, Haridi S. 2004. Concepts, Techniques and Models of Computer Programming. The MIT Press.
