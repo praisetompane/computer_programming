@@ -1,0 +1,19 @@
+- next field template:
+    - lectures:
+    - readings:
+        - Van Roy, P. 2004. Concepts, Techniques, and Models of Computer Programming 
+    - assignments:
+    - exams:
+
+============================================================================================================
+- next field template:
+    - lectures:
+    - readings:
+    - assignments:
+    - exams:
+
+legend:
+    *: SQ visit complete
+    **: R1 visit complete
+    ***: R2 visit complete
+    ****: R3 visit complete
