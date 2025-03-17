@@ -16,7 +16,7 @@ import sys
                     set instruction to decrement by k from {b + 1 to n} HOW?
                         mark where the decrease by k must start with -k(i.e. array[b+1] = -k)
                     
-    NB: Since we are not actually goin from a to b<=n
+    NB: Since we are not actually going from a to b<=n
         the cost of setting the instruction to:
             increment by k
             decrement by k
@@ -51,8 +51,6 @@ def arrayManipulation(n, queries):
         if max_consective_increase < max_consective_increase + sums[i]:
             max_consective_increase = max_consective_increase + sums[i]
 
-    for n in sums:
-        print(N)
     return max_consective_increase
 
 
@@ -76,9 +74,18 @@ if __name__ == "__main__":
     print("third problem")
     n = 10000000
     m = 100000
-    with open("data_10000000_100000.txt", "r") as file:
-        queries = [[int(x) for x in next(file).split()] for line in file]
+    with open("array_manipulation_data_10000000_100000.txt", "r") as file:
+        all_lines = file.readline()
+        nm = all_lines.split()
+
+        n = int(nm[0])
+        m = int(nm[1])
+
+        queries = []
+        for i in range(m):
+            queries.append(list(map(int, file.readline().rsplit())))
+        result = arrayManipulation(n, queries)
 
     result = arrayManipulation(n, queries)
     print(result)
-    assert result == 2490686975
+    assert result == 2497169732

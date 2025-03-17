@@ -1,9 +1,13 @@
-FROM mcr.microsoft.com/devcontainers/python:3.13 AS python
+FROM mcr.microsoft.com/devcontainers/python:3
 
 WORKDIR /computer_programming
 
 COPY . .
-    
-RUN pipenv install
 
-FROM sbtscala/scala-sbt:eclipse-temurin-17.0.4_1.7.1_3.2.0 AS scala
+RUN apt-get update \
+    && apt-get install aspell -y
+
+RUN pipenv sync --system -d
+
+RUN adduser -u 5678 --disabled-password --gecos "" computer_programming && chown -R computer_programming /computer_programming
+USER computer_programming

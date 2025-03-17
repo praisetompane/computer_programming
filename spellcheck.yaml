@@ -1,5 +1,5 @@
 matrix:
-  - name: All Files
+  - name: English
     aspell:
       lang: en
       ignore-case: false
