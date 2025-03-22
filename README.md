@@ -3,7 +3,7 @@
 ![build status](https://github.com/praisetompane/computer_programming/actions/workflows/computer_programming.yaml/badge.svg) <br>
 
 ## Objectives
-- attempts to define computer programming as a unified discipline using programming concepts and techniques independent of programming language implementations.
+- Attempts to define a unified discipline of computer programming independent of programming language implementations.
 
 ## Definitions:
 - def programming concepts (Van Roy, Haridi S. 2004:xiii):
@@ -86,4 +86,4 @@ pyspelling -c spellcheck.yaml
 
 **MYINC**: My Insight/Conjecture [Could Be Unoriginal/False and Likely Is]
 
-**Disclaimer**: This is an ongoing and incomplete project to unpack these concepts and serve as distributed memory.
+**Disclaimer**: This is an ongoing and incomplete project to unpack these concepts and serves as my distributed memory.
