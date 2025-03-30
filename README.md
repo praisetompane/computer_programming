@@ -3,34 +3,48 @@
 ![build status](https://github.com/praisetompane/computer_programming/actions/workflows/computer_programming.yaml/badge.svg) <br>
 
 ## Objectives
-- Attempts to define a unified discipline of computer programming independent of programming language implementations.
+- Attempts to define a unified scientific discipline of computer programming independent of programming language implementations.
 
 ## Definitions:
-- def programming concepts (Van Roy, Haridi S. 2004:xiii):
-  - these are organized in terms of/in relation to computation models:
-    - def computation model: formal system, that defines how computations are done (Van Roy, Haridi S. 2004:xiii):
-      - based on a simple core language called its kernel language (Van Roy, Haridi S. 2004:xiv)
-        - def kernel language: TBD
-      - defined in terms of (Van Roy, Haridi S. 2004:xiii):
-        - data types
-        - operations
-        - a programming language
+- def computation model(Haridi and Van Roy, 2004:xiii):
+    - formal: ???
 
-        **NB** there are other ways to define computation models: - finite automata (Sipser, 2012:xvii)
+        - in words: formal system, that defines how computations are done
 
-      - provides:
-        - a programming model:
-          - def programming model: a set of programming techniques and design principles
-            used to write programs
-            in the language of the computation model (Van Roy, Haridi S. 2004:29).
-            - def programming techniques: TBD
-            - def design principles: TBD
-        - set of techniques for:
-          - reasoning about programs
+  - plain english: ???
 
-- def creative extension principle: main criterion for when and which concept to add to a computation mode/kernel language (Van Roy, Haridi S. 2004:xiv)
+  - intuition: ???
 
-- def computer programming: the act of extending or changing a system's functionality (Van Roy, Haridi S. 2004:xv).
+  - properties:
+    - based on a simple core language called its kernel language (Haridi and Van Roy, 2004:xiv)
+      - def kernel language: TBD
+    - defined in terms of (Haridi and Van Roy, 2004:xiii):
+      - data types
+      - operations
+      - a programming language
+
+      **NB** there are other ways to define computation models: - finite automata (Sipser, 2012:xvii)
+
+    - provides:
+      - a programming model:
+        - def programming model: a set of programming techniques and design principles
+          used to write programs
+          in the language of the computation model (Haridi and Van Roy, 2004:29).
+          - def programming techniques: TBD
+          - def design principles: TBD
+      - set of techniques for:
+        - reasoning about programs
+
+  - examples: ???
+
+  - use cases: ???
+      
+  - proof: ???
+
+
+- def creative extension principle: main criterion for when and which concept to add to a computation mode/kernel language (Haridi and Van Roy, 2004:xiv)
+
+- def computer programming: the act of extending or changing a system's functionality (Haridi and Van Roy, 2004:xv).
   - practitioners:
     - general users: by changing the setting of an alarm
     - expert users: by writing new features for the system or updating existing

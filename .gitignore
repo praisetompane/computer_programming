@@ -172,5 +172,8 @@ node_modules
 .metals
 
 .DS_Store
+accreditation/
+ecosystem/
+scratch_pad/
 journal/
-accreditation.txt 
+applications/

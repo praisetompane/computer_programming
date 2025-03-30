@@ -2,6 +2,7 @@
     - lectures:
     - readings:
         - Van Roy, P. 2004. Concepts, Techniques, and Models of Computer Programming 
+            - current: 1 Introduction to Programming Concepts pg 31
     - assignments:
     - exams:
 
