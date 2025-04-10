@@ -4,9 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyspelling = "==2.10"
+numpy = "*"
+matplotlib = "*"
+graphviz = "*"
 
 [dev-packages]
+pyspelling = "*"
+ipykernel = "*"
+pytest = "*"
+black = "*"
 
 [requires]
 python_version = "3.13"

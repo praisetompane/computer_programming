@@ -1,51 +1,52 @@
 """
-    Context:
-        Given two numbers represented as a
-            each represented as a (singly)linkedlist
+Context:
+    Given two numbers represented as a
+        each represented as a (singly)linkedlist
 
-    Objective:
-        Write function that: 
-            adds the two numbers
-            returns sum as linkedlist
+Objective:
+    Write function that:
+        adds the two numbers
+        returns sum as linkedlist
 
-    Defintions:
+Defintions:
 
-    Constraints:
+Constraints:
 
-    Assumptions:
-        base 10 number system
-    Example:
+Assumptions:
+    base 10 number system
+Example:
 
-        input = (6 -> 1 -> 7) + (2 -> 9 -> 5)
-        output = (9 -> 1 -> 2)
+    input = (6 -> 1 -> 7) + (2 -> 9 -> 5)
+    output = (9 -> 1 -> 2)
 
-    Options:
-        1: Use doubly linked list
-            keep pointer to head and tail
-            for forward addition
-                start from the tail.
-            I CHOOSE THIS ONE, as per the book progression I do not know Stacks yet! :)
-        2. Use stacks
-            convert the linked list into stacks
-                - Can be:
-                    - a node based stack
-                    - a list based stack
-                7   5
-                1   9
-                6   2
-                    removing the head and add it to stack
-                    the last value(i.e. ones places will be the first values we process(i.e.))
-                Each place value addition result is added to a stack
-                    We'll start at the ones,
-                    therefore the highest place value(i.e. will be the last inserted, thus the first removed when 
-                    converting the result to integer)
-            result stack
-                9
-                1
-                2
-                which is equal to 912
+Options:
+    1: Use doubly linked list
+        keep pointer to head and tail
+        for forward addition
+            start from the tail.
+        I CHOOSE THIS ONE, as per the book progression I do not know Stacks yet! :)
+    2. Use stacks
+        convert the linked list into stacks
+            - Can be:
+                - a node based stack
+                - a list based stack
+            7   5
+            1   9
+            6   2
+                removing the head and add it to stack
+                the last value(i.e. ones places will be the first values we process(i.e.))
+            Each place value addition result is added to a stack
+                We'll start at the ones,
+                therefore the highest place value(i.e. will be the last inserted, thus the first removed when
+                converting the result to integer)
+        result stack
+            9
+            1
+            2
+            which is equal to 912
 
 """
+
 from impl.linkedlist_doubly import LinkedListDoubly
 
 

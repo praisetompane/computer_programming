@@ -1,41 +1,41 @@
 """
-    Context:
-        Given an M*N matrix
+Context:
+    Given an M*N matrix
 
-    Definitions:
+Definitions:
 
-    Objective:
-        In a matrix(M*N)
-            set the entire row and column to zero
-                if any point in the row or col is zero
+Objective:
+    In a matrix(M*N)
+        set the entire row and column to zero
+            if any point in the row or col is zero
 
-    Assumptions:
+Assumptions:
 
-    Constraints:
+Constraints:
 
-    Algorithm flow:
-        for each point (row,col) in grid
-            if point is zero
-                for each point in point's row
-                    set each point to zero in result matrix
-                for each point in point's col
-                    set each point to zerp in result matix
-    
-    Possible Solutions
-    
-    Example(s):
-        N = 4
-        Matrix:
-            110
-            111
-            011
-            111
+Algorithm flow:
+    for each point (row,col) in grid
+        if point is zero
+            for each point in point's row
+                set each point to zero in result matrix
+            for each point in point's col
+                set each point to zerp in result matix
 
-        Result
-            000
-            010
-            000
-            010
+Possible Solutions
+
+Example(s):
+    N = 4
+    Matrix:
+        110
+        111
+        011
+        111
+
+    Result
+        000
+        010
+        000
+        010
 
 """
 
@@ -73,13 +73,11 @@ def zero_matrix(source_matrix):
 
 source = [[1, 1, 0], [1, 1, 1], [0, 1, 1], [1, 1, 1]]
 
-print(zero_matrix(source) == [[0, 0, 0], [
-      0, 1, 0], [0, 0, 0], [0, 1, 0]])  # true
+print(zero_matrix(source) == [[0, 0, 0], [0, 1, 0], [0, 0, 0], [0, 1, 0]])  # true
 
 source = [[1, 1, 0, 1], [1, 1, 1, 1], [0, 1, 1, 1]]
 
-print(zero_matrix(source) == [[0, 0, 0, 0],
-      [0, 1, 0, 1], [0, 0, 0, 0]])  # true
+print(zero_matrix(source) == [[0, 0, 0, 0], [0, 1, 0, 1], [0, 0, 0, 0]])  # true
 """ 
     Performance
         M = rows

@@ -1,52 +1,52 @@
 """
-    Context:
-        Given:
-            method isSubstring
-                checks if one word is a substring of another
+Context:
+    Given:
+        method isSubstring
+            checks if one word is a substring of another
 
-    Definitions:
-        rotation = letters moved n places left/right
-            split string into two parts
-                x,y
-                rotated  string = yx
-                original string = xy
-            --------------------------------------
-                s1 = abcd
-                s2 = cdab
+Definitions:
+    rotation = letters moved n places left/right
+        split string into two parts
+            x,y
+            rotated  string = yx
+            original string = xy
+        --------------------------------------
+            s1 = abcd
+            s2 = cdab
 
-                s1
-                    x = ab
-                    y = cd
-                    yx = cdab = s2
+            s1
+                x = ab
+                y = cd
+                yx = cdab = s2
 
-        is not:
-            shuffling letters into arbitary positions
-            
-    Objective:
-        Given two strings
-            s1 and s2
+    is not:
+        shuffling letters into arbitary positions
 
-        Write Algorithm to check
-            if s2 is a 
-                rotation
-                    of s1
-            
-    Assumptions:
-        s1 and s2 are same length
-    Constraints:
-        Only 1 call to isSubstring
+Objective:
+    Given two strings
+        s1 and s2
 
-    Algorithm flow:
-        Using definition of rotation
-            yxyx contains xy
-            cdabcd contains abcd
+    Write Algorithm to check
+        if s2 is a
+            rotation
+                of s1
 
-        Flow:
-            s2contact = concat s2 and s2
-            check if s1 isSubstring of s2contact
-    Possible Solutions
-    
-    Example(s):
+Assumptions:
+    s1 and s2 are same length
+Constraints:
+    Only 1 call to isSubstring
+
+Algorithm flow:
+    Using definition of rotation
+        yxyx contains xy
+        cdabcd contains abcd
+
+    Flow:
+        s2contact = concat s2 and s2
+        check if s1 isSubstring of s2contact
+Possible Solutions
+
+Example(s):
 
 
 """
@@ -59,10 +59,10 @@ def string_rotation(s1, s2):
     return is_substring(s1, s2 + s2)
 
 
-assert (string_rotation("waterbottle", "erbottlewat"))  # True
-assert (string_rotation("abcd", "cdab"))  # True
-assert (not string_rotation("abcd", "cdaob"))  # False
-assert (not string_rotation("abcd", ""))  # False
+assert string_rotation("waterbottle", "erbottlewat")  # True
+assert string_rotation("abcd", "cdab")  # True
+assert not string_rotation("abcd", "cdaob")  # False
+assert not string_rotation("abcd", "")  # False
 print("completed successfully")
 
 """

@@ -2,7 +2,7 @@
 Context:
     Given:
         linkedlist
-        
+
 Objective:
     delete middle node
 
@@ -30,6 +30,7 @@ Performance:
         Space to store linkedlist
 
 """
+
 from impl.linkedlist import LinkedList, Node
 
 

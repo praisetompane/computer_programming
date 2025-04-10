@@ -1,10 +1,10 @@
 """
-    Foreach value, currentIndex pair
-        expectedIndexValue = index + 1
-        if expectedIndexValue == value, continue
-        else 
-            currentValueCorrectIndex = value - 1
-            swap(currentIndex, currentValueCorrectIndex)
+Foreach value, currentIndex pair
+    expectedIndexValue = index + 1
+    if expectedIndexValue == value, continue
+    else
+        currentValueCorrectIndex = value - 1
+        swap(currentIndex, currentValueCorrectIndex)
 
 """
 

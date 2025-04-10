@@ -1,8 +1,9 @@
 def date_on_256th_day(year):
     def is_leap_year(year: int):
-        if((year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0)):
+        if (year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0):
             return True
-        else: return False
+        else:
+            return False
 
     def calculate_day(year):
         if is_leap_year(year):
@@ -14,7 +15,8 @@ def date_on_256th_day(year):
 
     return f"{day}.09.{year}"
 
-#NB: incomplete
+
+# NB: incomplete
 print(date_on_256th_day(1800))
 """
 References:

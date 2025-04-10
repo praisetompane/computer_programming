@@ -1,4 +1,4 @@
-- next field template:
+- unified discipline of computer programming:
     - lectures:
     - readings:
         - Van Roy, P. 2004. Concepts, Techniques, and Models of Computer Programming 

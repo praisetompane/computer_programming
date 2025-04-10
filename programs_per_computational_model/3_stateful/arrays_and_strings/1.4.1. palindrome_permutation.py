@@ -1,30 +1,31 @@
 """
-    input = string
-    objective = determine if input is
-                    a permutation of
-                        a palindrome
+input = string
+objective = determine if input is
+                a permutation of
+                    a palindrome
 
-    definitions:
-        permutaion:
-            For two strings to be permutations of each other, they must contain the same:
-                - characters 
-                        characters include all possible characters in Unicode char set (whitespace etc)
-                - number of characters
+definitions:
+    permutaion:
+        For two strings to be permutations of each other, they must contain the same:
+            - characters
+                    characters include all possible characters in Unicode char set (whitespace etc)
+            - number of characters
 
 
-        palindrome:
-            a word/phrase
-                same
-                    backwards AND forwards
+    palindrome:
+        a word/phrase
+            same
+                backwards AND forwards
 
-    question: can the input string be rewritten
-                so the new string(permuatation)
-                    is a palindrome(i.e. reads the same forwards and backwards)?
-    algo flow:
-        generate permutations of the string
-            check if the any permutation is a palindrome
+question: can the input string be rewritten
+            so the new string(permuatation)
+                is a palindrome(i.e. reads the same forwards and backwards)?
+algo flow:
+    generate permutations of the string
+        check if the any permutation is a palindrome
 
 """
+
 from itertools import permutations
 
 

@@ -1,31 +1,31 @@
 """
-    Context:
-        Given:
-            number in latin representation
-    Objective:
-        Convert to roman numeral representation
+Context:
+    Given:
+        number in latin representation
+Objective:
+    Convert to roman numeral representation
 
-    Assumptions:
-        valid number provided
+Assumptions:
+    valid number provided
 
-    Constraints:
+Constraints:
 
-    Example:
-        1245
+Example:
+    1245
 
-    Flow
-        latin_numbers
-        roman_numbers
-        while number is not 0
-            if <= number
+Flow
+    latin_numbers
+    roman_numbers
+    while number is not 0
+        if <= number
 
-    Performance
-        N = number
-        LR = 1000
-        Time = O(N/LR)
+Performance
+    N = number
+    LR = 1000
+    Time = O(N/LR)
 
-        Space = O((N/LR * 2)) characters
-            *2 because average roman number is 2 characters
+    Space = O((N/LR * 2)) characters
+        *2 because average roman number is 2 characters
 """
 
 

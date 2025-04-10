@@ -1,32 +1,32 @@
 """
-    Given:
-        array of integers
-    Objective:
-        return a frequency array of the elements
-            count the number of times a value appears in the array
-        NB: Aways return a 100 value frequency array 
-    Assumptions:
-    
-    Example:
-        arr = [1, 1, 3, 2, 1]
-        values range = [0 ... 3]
-        
-    Flow
-        frequencies = [0] * values range
-        for n in arr:
-            frequencies[n] += 1
-        from the start of the array(i.e. index 0)
-            append each index(i.e. the number) to sorted array
-                as many times as stiputed by its frequncy    
+Given:
+    array of integers
+Objective:
+    return a frequency array of the elements
+        count the number of times a value appears in the array
+    NB: Aways return a 100 value frequency array
+Assumptions:
 
-    # => result will be a sorted array
-    Constraints:
-        100 <= n <= 10^6 : size of the array
-        0 <= arr[i] < 100 range of values
-    Performance
-            𝑂(𝑁): we visit each array element
-            O(100): initialise frequncy table of size 100
-            O(N + 100) = 𝑂(𝑁) : drop constants
+Example:
+    arr = [1, 1, 3, 2, 1]
+    values range = [0 ... 3]
+
+Flow
+    frequencies = [0] * values range
+    for n in arr:
+        frequencies[n] += 1
+    from the start of the array(i.e. index 0)
+        append each index(i.e. the number) to sorted array
+            as many times as stiputed by its frequncy
+
+# => result will be a sorted array
+Constraints:
+    100 <= n <= 10^6 : size of the array
+    0 <= arr[i] < 100 range of values
+Performance
+        𝑂(𝑁): we visit each array element
+        O(100): initialise frequncy table of size 100
+        O(N + 100) = 𝑂(𝑁) : drop constants
 """
 
 

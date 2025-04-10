@@ -1,12 +1,12 @@
 """
 
-    replace space
-        with "%20" character
+replace space
+    with "%20" character
 
-    design:
-        interate though string characters
-            if character == " "
-                replace with "%20"
+design:
+    interate though string characters
+        if character == " "
+            replace with "%20"
 
 """
 

@@ -1,6 +1,7 @@
-'''
-    implement subset of english dictionary
-'''
+"""
+implement subset of english dictionary
+"""
+
 
 class Letter:
     next_letters = []

@@ -1,26 +1,26 @@
 """
-    Context:
-        Given unsorted linked list
-    Definitions:
+Context:
+    Given unsorted linked list
+Definitions:
 
-    Objective:
-        Remove duplicates
-    Assumptions:
-        Using singly linked list
-    Constraints:
-        None
-    Example(s):
-        input = [1, 2, 4, 6, 1, 6, 8, 5]
-        state:[1,2,4,6,8,5]
-        
-    Algorithm flow:
-        empty hash(nodeData -> count)
-        foreach element in list
-            if exists in hash
-                deleteNode
-                add element and count = 1
-            else
-                add element and count = 1
+Objective:
+    Remove duplicates
+Assumptions:
+    Using singly linked list
+Constraints:
+    None
+Example(s):
+    input = [1, 2, 4, 6, 1, 6, 8, 5]
+    state:[1,2,4,6,8,5]
+
+Algorithm flow:
+    empty hash(nodeData -> count)
+    foreach element in list
+        if exists in hash
+            deleteNode
+            add element and count = 1
+        else
+            add element and count = 1
 """
 
 from impl.linkedlist import LinkedList

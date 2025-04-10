@@ -1,11 +1,10 @@
 # What is Computer Programming?
-
 ![build status](https://github.com/praisetompane/computer_programming/actions/workflows/computer_programming.yaml/badge.svg) <br>
 
 ## Objectives
 - Attempts to define a unified scientific discipline of computer programming independent of programming language implementations.
 
-## Definitions:
+## Definitions
 - def computer programming: the act of extending or changing a system's functionality (Haridi and Van Roy, 2004:xv).
   - formal: ???
     - in words: ???
@@ -104,14 +103,12 @@ pyspelling -c spellcheck.yaml
 ```
 
 
-## References:
-  - Van Roy P, Haridi S. 2004. Concepts, Techniques and Models of Computer Programming. The MIT Press.
-  - Sipser, M. 2012. Introduction to the Theory of Computation. 3rd ed. Cengage Learning.
+## References
+- Van Roy P, Haridi S. 2004. Concepts, Techniques and Models of Computer Programming. The MIT Press.
+- Sipser, M. 2012. Introduction to the Theory of Computation. 3rd ed. Cengage Learning.
 
-# Legend:
-
-**Q**: Question for later research
-
+# Legend
+**Q**: Question for later research <br>
 **MYINC**: My Insight/Conjecture [Could Be Unoriginal/False and Likely Is]
 
 **Disclaimer**: This is an ongoing and incomplete project to unpack these concepts and serves as my distributed memory.

@@ -1,6 +1,6 @@
 """
-    Assumptions:
-        The string uses 128 ASCII character set
+Assumptions:
+    The string uses 128 ASCII character set
 """
 
 

@@ -1,29 +1,29 @@
 """
-    input = string
-    objective = determine if input is
-                    a permutation of
-                        a palindrome
+input = string
+objective = determine if input is
+                a permutation of
+                    a palindrome
 
-    definitions:
-        permutaion:
-            For two strings to be permutations of each other, they must contain the same:
-                - characters 
-                        characters include all possible characters in Unicode char set (whitespace etc)
-                - number of characters
+definitions:
+    permutaion:
+        For two strings to be permutations of each other, they must contain the same:
+            - characters
+                    characters include all possible characters in Unicode char set (whitespace etc)
+            - number of characters
 
-        palindrome:
-            a word/phrase
-                same
-                    backwards AND forwards
-            What is required to write a set of characters the SAME way backwards AND forwards?
-                #Note to self => The character/string questions treat them as a set (a/A to z/Z)
+    palindrome:
+        a word/phrase
+            same
+                backwards AND forwards
+        What is required to write a set of characters the SAME way backwards AND forwards?
+            #Note to self => The character/string questions treat them as a set (a/A to z/Z)
 
-                Even number of characters
-                Maximum of one odd character(for the middle)
+            Even number of characters
+            Maximum of one odd character(for the middle)
 
-    question: can the input string be rewritten
-                so the new string(permutation)
-                    is a palindrome(i.e. reads the same forwards and backwards)?
+question: can the input string be rewritten
+            so the new string(permutation)
+                is a palindrome(i.e. reads the same forwards and backwards)?
 
 """
 

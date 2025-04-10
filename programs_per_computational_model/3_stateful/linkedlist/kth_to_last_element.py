@@ -1,45 +1,46 @@
 """
-    Context:
-        Given:
-            Singly Linkedlist
-    Definitions:
-        kth to last element = element that is k elements from the last element
-            inclusive of the last element
-            excluding the starting element
-    Objective:
-        find the kth to last element of a singly linked list
+Context:
+    Given:
+        Singly Linkedlist
+Definitions:
+    kth to last element = element that is k elements from the last element
+        inclusive of the last element
+        excluding the starting element
+Objective:
+    find the kth to last element of a singly linked list
 
-    Assumptions:
-        k <= number of nodes in linked list
-        
-    Constraints:
+Assumptions:
+    k <= number of nodes in linked list
 
-    Example(s):
-        input = [1, 2, 4, 6, 1, 7, 8, 5]
-        state:
-            current_element = 1
-            num_elements_to_last = 7
-            current_element = 2
-            num_elements_to_last = 6
-            current_element = 4
-            num_elements_to_last = 5
-            return element 4
+Constraints:
+
+Example(s):
+    input = [1, 2, 4, 6, 1, 7, 8, 5]
+    state:
+        current_element = 1
+        num_elements_to_last = 7
+        current_element = 2
+        num_elements_to_last = 6
+        current_element = 4
+        num_elements_to_last = 5
+        return element 4
 
 
-            4 is 5 places from last element 5(inc.)
-        
-        kth_element(kth_position = 5)
-            ans = 6
-        
-    Flow:
-        until we reach the last element
-            move to current_element
-            num_elements_to_last = count number of elements to last element
-            if num_elements_to_last == kth_position
-                return current_element
-            else 
-                move to next element
+        4 is 5 places from last element 5(inc.)
+
+    kth_element(kth_position = 5)
+        ans = 6
+
+Flow:
+    until we reach the last element
+        move to current_element
+        num_elements_to_last = count number of elements to last element
+        if num_elements_to_last == kth_position
+            return current_element
+        else
+            move to next element
 """
+
 """
     Performance
 

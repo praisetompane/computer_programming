@@ -2,7 +2,7 @@
 Context:
     Given:
         linkedlist
-        
+
 Objective:
     delete middle node
 
@@ -25,12 +25,13 @@ Flow:
     prior_node.next = prior_node.next.next
 
 Performance:
-    Time = O(1) 
+    Time = O(1)
         constant time to copy data and shift pointers
     Space = 𝑂(𝑁)
         Space to store linkedlist
 
 """
+
 from impl.linkedlist import LinkedList, Node
 
 

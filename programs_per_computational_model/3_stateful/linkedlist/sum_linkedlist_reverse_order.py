@@ -1,72 +1,73 @@
 """
-    Context:
-        Given:
-            Two numbers
-                each represented as linkedlist
-            The digits in reserve order
-                such that
-                    the 1's digit is at the head
-    
-    Objective:
-        Write function that:
-            adds the tow numbers
-            returns the sum as a linkedlist
+Context:
+    Given:
+        Two numbers
+            each represented as linkedlist
+        The digits in reserve order
+            such that
+                the 1's digit is at the head
 
-    Definitions:
-    
-    Constraints:
+Objective:
+    Write function that:
+        adds the tow numbers
+        returns the sum as a linkedlist
 
-    Assumptions:
+Definitions:
 
-    Example:
-        input = (7 -> 1 -> 6) + (5 -> 9 -> 2)
-        output = 2 -> 1 -> 9 = 912
+Constraints:
 
-    Flow:
-        Option 1:
+Assumptions:
 
-            While (both lists have nodes) at current digit place
-                add each node's value to the current place [default to zero if no value in either list]
-                    handle digit place overflows:
-                        carry over extra place value
-                        set remainder to output's place value
-                move to each number's next node
+Example:
+    input = (7 -> 1 -> 6) + (5 -> 9 -> 2)
+    output = 2 -> 1 -> 9 = 912
 
-            Performance:    
-                FirstNumberLength = FNL
-                SecondNumberLength = SNL
+Flow:
+    Option 1:
 
-                Time = ± O(FNL + SNL)
-                    process each element in each number
-                Spance = ± O(FNL + SNL)
-                    The longest between FNL and SNL
-            
-            Paper run:
-                state:
-                    input = (7 -> 1 -> 6) + (5 -> 9 -> 2)
-                    next_place_carry_over_value = 1
-                    output = 2 -> 1 => 9
-                    first_number_current_node = 6
-                    second_number_current_node = 2
+        While (both lists have nodes) at current digit place
+            add each node's value to the current place [default to zero if no value in either list]
+                handle digit place overflows:
+                    carry over extra place value
+                    set remainder to output's place value
+            move to each number's next node
 
-                    number_system_base = 10
-                    next_digit_place_carry = 0 #1
-                    for d1, d2 in first_number, second_number
-                        if d1 and d2 defined: 
-                            add them + next_digit_place_carry*next_digit_place
-                            if sum >= number_system_base
-                                set digit to sum/number_system_base
-                                set carry to sum%number_system_base
-                            else
-                                set digit to sum
-                        if d1 defined but no d2
-                            set digit to d1 + carry
-                        if d2 defined but no d1
-                            set digit to d2 + carry
-                    
-                    21
+        Performance:
+            FirstNumberLength = FNL
+            SecondNumberLength = SNL
+
+            Time = ± O(FNL + SNL)
+                process each element in each number
+            Spance = ± O(FNL + SNL)
+                The longest between FNL and SNL
+
+        Paper run:
+            state:
+                input = (7 -> 1 -> 6) + (5 -> 9 -> 2)
+                next_place_carry_over_value = 1
+                output = 2 -> 1 => 9
+                first_number_current_node = 6
+                second_number_current_node = 2
+
+                number_system_base = 10
+                next_digit_place_carry = 0 #1
+                for d1, d2 in first_number, second_number
+                    if d1 and d2 defined:
+                        add them + next_digit_place_carry*next_digit_place
+                        if sum >= number_system_base
+                            set digit to sum/number_system_base
+                            set carry to sum%number_system_base
+                        else
+                            set digit to sum
+                    if d1 defined but no d2
+                        set digit to d1 + carry
+                    if d2 defined but no d1
+                        set digit to d2 + carry
+
+                21
 
 """
+
 from impl.linkedlist import LinkedList
 
 

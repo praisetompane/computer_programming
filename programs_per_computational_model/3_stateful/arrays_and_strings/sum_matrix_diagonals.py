@@ -6,38 +6,38 @@
 #
 
 """
-    Context:
-        Given:
-            sqaure matrix
-                i.e. width = lenght (e.g. 3 * 3)
-    Objective:
-        calculate the absolute difference  
-            between sum of its diagonals
-    
-    Assmptions:
-        matrix is never empty
-    
-    Constraints:
-        -100 <= arr[i][j] <= 100
-        
-    Example:
-        1 2 3
-        4 5 6
-        9 8 9
-    
-        left_diagonal  = 1 + 5 + 9 = 15
-        right_diagonal = 3 + 5 + 9 = 17
-        absolute_difference = |17 - 15| = 2
-    
-    Flow:
-        left_diagonal = arr[0][0] + arr[1][1] + arr[2][2]
-        right_diagonal = arr[2][0] + arr[1][2] + arr[0][2]
-        absolute_difference = |left_diagonal - right_diagonal|
-        return absolute_difference
+Context:
+    Given:
+        sqaure matrix
+            i.e. width = lenght (e.g. 3 * 3)
+Objective:
+    calculate the absolute difference
+        between sum of its diagonals
 
-    Performance:
-        O(L). L is the dimension(either width or length of) of the matrix 
-                             
+Assmptions:
+    matrix is never empty
+
+Constraints:
+    -100 <= arr[i][j] <= 100
+
+Example:
+    1 2 3
+    4 5 6
+    9 8 9
+
+    left_diagonal  = 1 + 5 + 9 = 15
+    right_diagonal = 3 + 5 + 9 = 17
+    absolute_difference = |17 - 15| = 2
+
+Flow:
+    left_diagonal = arr[0][0] + arr[1][1] + arr[2][2]
+    right_diagonal = arr[2][0] + arr[1][2] + arr[0][2]
+    absolute_difference = |left_diagonal - right_diagonal|
+    return absolute_difference
+
+Performance:
+    O(L). L is the dimension(either width or length of) of the matrix
+
 """
 
 

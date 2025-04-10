@@ -1,61 +1,62 @@
 """
-    Context:
-        Given Image
-            Represented by N*N matrix
-            Each pixel = 4bytes
+Context:
+    Given Image
+        Represented by N*N matrix
+        Each pixel = 4bytes
 
-    Definitions:
-        Rotate by 90 degrees? 
-            = (x,y) => (y, -x)
+Definitions:
+    Rotate by 90 degrees?
+        = (x,y) => (y, -x)
 
-    Objective:
-        Function to rotate the image 90 degrees
-       
-    Assumptions:
-        Rotation is clockwise
+Objective:
+    Function to rotate the image 90 degrees
 
-    Constraints:
+Assumptions:
+    Rotation is clockwise
 
-    Algorithm flow:
-        Clockwise Rotation => (x,y) => (y, -x)
-        
-        create swapped hash table
+Constraints:
 
-        for each point (row,col) in grid
-            if not in swapped
-                new_cartesian_point = apply Clockwise Rotation above
-                matrix_point = apply  Map to Matrix
-                swap values at (row, col) with values matrix point
-                add (row, col) and matrix point to swapped
+Algorithm flow:
+    Clockwise Rotation => (x,y) => (y, -x)
 
-    Possible Solutions
-    
-    Example(s):
-        N = 4
-        New Image:
-            XXX
-            XXX
-            XXX
-        Swapped = (0,0)
-                  (O,1)
-                  (1,0)
-                  (0,2)
-                  (2,0) 
-                  (1,1)
-                  (1,2)
-                  (2,1)
-                  (2,2)
-        Current Image:
-            ABC  (0,0)(0,1)(0,2)
-            EFG  (1,0)(1,1)(1,2)
-            IJK  (2,0)(2,1)(2,2)
+    create swapped hash table
 
-        Result:
+    for each point (row,col) in grid
+        if not in swapped
+            new_cartesian_point = apply Clockwise Rotation above
+            matrix_point = apply  Map to Matrix
+            swap values at (row, col) with values matrix point
+            add (row, col) and matrix point to swapped
 
-            AEI
-            BFJ
-            CGK
+Possible Solutions
+
+Example(s):
+    N = 4
+    New Image:
+        XXX
+        XXX
+        XXX
+    Swapped = (0,0)
+              (O,1)
+              (1,0)
+              (0,2)
+              (2,0)
+              (1,1)
+              (1,2)
+              (2,1)
+              (2,2)
+    Current Image:
+        ABC  (0,0)(0,1)(0,2)
+        EFG  (1,0)(1,1)(1,2)
+        IJK  (2,0)(2,1)(2,2)
+
+    Result:
+
+        AEI
+        BFJ
+        CGK
 """
+
 """
     References:
     2D array = https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/

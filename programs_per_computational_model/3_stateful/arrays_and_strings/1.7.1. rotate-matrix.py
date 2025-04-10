@@ -1,54 +1,55 @@
 """
-    Context:
-        Given Image
-            Represented by N*N matrix
-            Each pixel = 4bytes
+Context:
+    Given Image
+        Represented by N*N matrix
+        Each pixel = 4bytes
 
-    Definitions:
-        Rotate by 90 degrees? 
+Definitions:
+    Rotate by 90 degrees?
 
-    Objective:
-        Function to rotate the image 90 degrees
-       
-    Assumptions:
-        Rotation is clockwise
+Objective:
+    Function to rotate the image 90 degrees
 
-    Constraints:
+Assumptions:
+    Rotation is clockwise
 
-    Algorithm flow:
-        Clockwise Rotation => x, y : Cartesian
-            (x,y) => (y, -1*x)
-            
-        Map to Matrix => x,y
-            (x, y) => (abs(x),abs(y))
+Constraints:
 
-        create new matrix N*N matrix
-        for each point (row,col) in grid
-            new_cartesian_point = apply Clockwise Rotation above
-            matrix_point = apply  Map to Matrix
-            set matrix_point to value at (row,col)
+Algorithm flow:
+    Clockwise Rotation => x, y : Cartesian
+        (x,y) => (y, -1*x)
 
-    Possible Solutions
-    
-    Example(s):
-        N = 4
-        New Image:
-            XXX
-            XXX
-            XXX
+    Map to Matrix => x,y
+        (x, y) => (abs(x),abs(y))
 
-        Current Image:
-            ABC  (0,0)(0,1)(0,2)
-            EFG  (1,0)(1,1)(1,2)
-            IJK  (2,0)(2,1)(2,2)
+    create new matrix N*N matrix
+    for each point (row,col) in grid
+        new_cartesian_point = apply Clockwise Rotation above
+        matrix_point = apply  Map to Matrix
+        set matrix_point to value at (row,col)
 
-        Result:
+Possible Solutions
 
-            AEI
-            BFJ
-            CGK
-            
+Example(s):
+    N = 4
+    New Image:
+        XXX
+        XXX
+        XXX
+
+    Current Image:
+        ABC  (0,0)(0,1)(0,2)
+        EFG  (1,0)(1,1)(1,2)
+        IJK  (2,0)(2,1)(2,2)
+
+    Result:
+
+        AEI
+        BFJ
+        CGK
+
 """
+
 """
     References:
     2D array = https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/

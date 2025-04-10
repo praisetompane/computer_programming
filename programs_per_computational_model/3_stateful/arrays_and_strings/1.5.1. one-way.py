@@ -1,52 +1,52 @@
 """
-    Context:
-        Three edits on a string
-            insert a character
-            remove a character
-            replace a character
-    Objective:
-        Given two strings
-            check if they are
-                one edit
-                or zero edits
-                away
+Context:
+    Three edits on a string
+        insert a character
+        remove a character
+        replace a character
+Objective:
+    Given two strings
+        check if they are
+            one edit
+            or zero edits
+            away
 
-    algorithm flow:
-            if string_1 is longer than string_2 #insert and remove (since removal is inverse of insertion)
-                from string_1 
-                    remove one character at a time
-                        compare to string_2
-                            return when string_1 equals string_2
-                            move to next character if not equal
-            if string_1 is not longer than string_2 #insert and remove
-                from string_2
-                    remove one character at a time
-                    compare to string_1
-                            return when string_1 equals string_2
-                            move to next character if not equal
-            if string_1 length is equal string_2
-                check that only one character is different
-            
-    Example:
-        pale, ple -> true #removal/insertion 
+algorithm flow:
+        if string_1 is longer than string_2 #insert and remove (since removal is inverse of insertion)
+            from string_1
+                remove one character at a time
+                    compare to string_2
+                        return when string_1 equals string_2
+                        move to next character if not equal
+        if string_1 is not longer than string_2 #insert and remove
+            from string_2
+                remove one character at a time
+                compare to string_1
+                        return when string_1 equals string_2
+                        move to next character if not equal
+        if string_1 length is equal string_2
+            check that only one character is different
 
-            rm p
-            ale == ple? false
-            rm a
-            ple ==ple? true
+Example:
+    pale, ple -> true #removal/insertion
 
-        pale, bake -> false
-            b and k different in string_2 => false
+        rm p
+        ale == ple? false
+        rm a
+        ple ==ple? true
 
-        pale, bale -> true
-            b different in string_2 => true
+    pale, bake -> false
+        b and k different in string_2 => false
+
+    pale, bale -> true
+        b different in string_2 => true
 
 """
 
 
 def determine_if_only_one_change_exists(long_string, long_string_length, short_string):
     for i in range(long_string_length):
-        if long_string[:i] + long_string[i + 1:] == short_string:
+        if long_string[:i] + long_string[i + 1 :] == short_string:
             return True
     return False
 

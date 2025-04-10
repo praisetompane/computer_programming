@@ -1,10 +1,10 @@
 """
-    If num % 3 == 0 
-        Fizz
-    Else if num % 5 == 0 
-        Buzz
-    Else If num % 3 == 0 and num % 5 == 0
-        FizzBuzz
+If num % 3 == 0
+    Fizz
+Else if num % 5 == 0
+    Buzz
+Else If num % 3 == 0 and num % 5 == 0
+    FizzBuzz
 """
 
 

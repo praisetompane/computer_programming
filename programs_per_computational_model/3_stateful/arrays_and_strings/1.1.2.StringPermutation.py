@@ -1,8 +1,8 @@
 """
-        For two strings to be permutations of each other, they must contain the same:
-            - characters 
-                    characters include all possible characters in Unicode char set (whitespace etc)
-            - number of characters
+For two strings to be permutations of each other, they must contain the same:
+    - characters
+            characters include all possible characters in Unicode char set (whitespace etc)
+    - number of characters
 
 """
 

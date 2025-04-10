@@ -1,51 +1,51 @@
 """
-    Context:
-        String compression
-            using counts
-                of repeated characters
-    Definitions:
+Context:
+    String compression
+        using counts
+            of repeated characters
+Definitions:
 
-    Objective:
+Objective:
 
-    Assumptions:
-        Only lower and upper case letters present
-    
-    Constraints:
+Assumptions:
+    Only lower and upper case letters present
 
-    Inputs:
-        string value
+Constraints:
 
-    Algorithm flow:
-        Compress the string
-        if string empty: return emotty
-        if length of compressed string >= original string
-            return original string
-        else    
-            return compressed string
+Inputs:
+    string value
 
-    Example(s):
-        aabcccccaaa => a2b1c5a3
+Algorithm flow:
+    Compress the string
+    if string empty: return emotty
+    if length of compressed string >= original string
+        return original string
+    else
+        return compressed string
 
-    Possible Solutions
-        character_count = 1
-        current_character = set to first character in string
-        compressed_string = ''
-        for the length of string
-            pick a character at current index
-                compare character with current_character
-                    if same 
-                        increment character_count by 1
-                    if not
-                        append current_character and character_count to character_count
-                        set character_count to 1
-                        set current_character = character
+Example(s):
+    aabcccccaaa => a2b1c5a3
 
-    Walk through
-        string length = 10
-        current_character = a
-        character_count = 3
-        compressed_string = a2b1c5a3
-            
+Possible Solutions
+    character_count = 1
+    current_character = set to first character in string
+    compressed_string = ''
+    for the length of string
+        pick a character at current index
+            compare character with current_character
+                if same
+                    increment character_count by 1
+                if not
+                    append current_character and character_count to character_count
+                    set character_count to 1
+                    set current_character = character
+
+Walk through
+    string length = 10
+    current_character = a
+    character_count = 3
+    compressed_string = a2b1c5a3
+
 """
 
 
@@ -65,8 +65,7 @@ def compress(string_input):
 
             if character != current_character or i == last_index:
                 compressed_string = (
-                    compressed_string +
-                    str(current_character) + str(character_count)
+                    compressed_string + str(current_character) + str(character_count)
                 )
                 character_count = 1
                 current_character = character

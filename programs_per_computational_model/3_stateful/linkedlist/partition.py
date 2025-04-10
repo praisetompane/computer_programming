@@ -1,72 +1,73 @@
 """
-    Context:
-        Given linkedlist
-    Objective:
-        Partition list 
-            along a value [partition = x]
-            such that
-                all nodes < x come
-                    before all nodes > x
-        values of x can be anywhere after values less than x
-    Definitions
+Context:
+    Given linkedlist
+Objective:
+    Partition list
+        along a value [partition = x]
+        such that
+            all nodes < x come
+                before all nodes > x
+    values of x can be anywhere after values less than x
+Definitions
 
-    Assumptions
-        partion value exists in list
-        list length > 0
+Assumptions
+    partion value exists in list
+    list length > 0
 
-    Constraints:
+Constraints:
 
-    Example:
-        input = 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
-        output = 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
+Example:
+    input = 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
+    output = 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
 
-    Flow:
-        Option 1:
-            Bubble sort 
-                moving nodes >= partition up[to right]
-            Performance
-                Time: O(N^2) => Quadratic, SLOW!
-                Space: 
+Flow:
+    Option 1:
+        Bubble sort
+            moving nodes >= partition up[to right]
+        Performance
+            Time: O(N^2) => Quadratic, SLOW!
+            Space:
 
-        Option 2:
-            Use quick sort in language libary
-            BUT Write your own and could get 𝑂(𝑁) since we're not interested in fully sorting the lit
+    Option 2:
+        Use quick sort in language libary
+        BUT Write your own and could get 𝑂(𝑁) since we're not interested in fully sorting the lit
 
-            Performance
-                Time: O(NlogN) =>  
-                Space
-        
-        Option 3:
-            once pass bubble sort
+        Performance
+            Time: O(NlogN) =>
+            Space
 
-            -----
-            last_less_than_partition = None
-            current_node = head
-            while current_node is not None
-                if current < parition
-                    if last_less_than_partition is None
-                        last_less_than_partition = current_node
-                    else
-                        insert it after last_less_than_partition
-                    move to next node
+    Option 3:
+        once pass bubble sort
+
+        -----
+        last_less_than_partition = None
+        current_node = head
+        while current_node is not None
+            if current < parition
+                if last_less_than_partition is None
+                    last_less_than_partition = current_node
                 else
-                    move to next node
+                    insert it after last_less_than_partition
+                move to next node
+            else
+                move to next node
 
-            Performance
-                Time: 𝑂(𝑁) =>  
-                Space
+        Performance
+            Time: 𝑂(𝑁) =>
+            Space
 
-            Paper Run:
-                input = 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
-                output = 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
-                state:
-                    partition = 5
-                    last_less_than_partition = 2
-                    current_node = 3
-                    output = 3 -> 2 -> 5 -> 8 -> 5 -> 10 -> 1
-                    output = 3 -> 2 -> 1 -> 5 -> 8 -> 5 -> 10
+        Paper Run:
+            input = 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
+            output = 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
+            state:
+                partition = 5
+                last_less_than_partition = 2
+                current_node = 3
+                output = 3 -> 2 -> 5 -> 8 -> 5 -> 10 -> 1
+                output = 3 -> 2 -> 1 -> 5 -> 8 -> 5 -> 10
 
 """
+
 from impl.linkedlist import LinkedList
 
 
